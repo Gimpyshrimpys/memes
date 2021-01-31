@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Meme Apoclypse.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Meme Apoclypse" startnode="1" creator="Twine" creator-version="2.3.10" ifid="DAE0C23B-83A0-438A-AC95-9A125FD7A42B" zoom="1" format="Harlowe" format-version="3.2.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="Meme Apoclypse" startnode="1" creator="Twine" creator-version="2.3.10" ifid="DAE0C23B-83A0-438A-AC95-9A125FD7A42B" zoom="0.6" format="Harlowe" format-version="3.2.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
  visibility: hidden
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.getStoragePrefix = function () {
 	return "(Saved Game " + Engine.options.ifid + ") ";
@@ -17,7 +17,7 @@
 
 window.deleteSaveSlot = function (slotName) {
 	localStorage.removeItem(getStoragePrefix() + slotName);
-}</script><tw-passagedata pid="1" name="start" tags="" position="373,154" size="200,200">&lt;h3&gt;Meme story that I am making&lt;/h3&gt;
+}</script><tw-passagedata pid="1" name="start" tags="" position="373,154" size="200,200">&lt;h3&gt;Meme Apocalypse&lt;/h3&gt;
 
 
 
@@ -29,8 +29,22 @@ window.deleteSaveSlot = function (slotName) {
 
 &lt;p style=&quot;font-size:16px&quot;&gt;Tip: If there are no buttons on screen at any just wait 5-10 seconds and something would probably happen.&lt;/p&gt;
 
-[[Story stats if you want them.]]</tw-passagedata><tw-passagedata pid="2" name="true start" tags="" position="784,126" size="100,100">{(set: $name to 0)(save-game: &quot;Slot 1&quot;)
-Write your name below}
+[[Story stats if you want them.]]</tw-passagedata><tw-passagedata pid="2" name="true start" tags="" position="784,126" size="100,100">{(set: _event to (random: 1,3))
+(if: _event is 1)[
+	(set: $male to true)
+	(set: $female to false)
+	(set: $attackhelicopter to false)]
+	(if: _event is 2)[
+	(set: $female to true)
+	(set: $male to false)
+	(set: $attackhelicopter to false)]
+	(if: _event is 3)[
+	(set: $female to false)
+	(set: $male to false)
+	(set: $attackhelicopter to true)]
+(save-game: &quot;Slot 1&quot;)(set: $name to 0)
+(if: $male is true)[{
+Write your name below
 
 (force-input-box:2bind $name,&quot;=XX=&quot;,1,&quot;Jeff&quot;)
 
@@ -38,9 +52,31 @@ Write your name below}
 	(if: $name is &quot;Jeff&quot;)[
 		&lt;p style=&quot;font-size:16px&quot;&gt;(ik very original, i very smart)&lt;/p&gt;
 		(live: 5s)[
-			(goto: &quot;jumpscare&quot;)]]]</tw-passagedata><tw-passagedata pid="3" name="jumpscare" tags="" position="663,243" size="100,100">&lt;img src=&quot;jumpscares/1.jpg&quot;&gt;
+			(goto: &quot;jumpscare&quot;)]]]}]
 
-(live: 2s)[(goto: &quot;start story&quot;)]</tw-passagedata><tw-passagedata pid="4" name="start story" tags="checkpoint major-story-changes" position="833,308" size="200,200">{(set: $checkpoint to 1)Your name is jeff, a popular meme, but you are sick of being a meme so you decide to seek revenge of all memes that hurt your feelings bc you died and got replaced.}
+(if: $female is true)[{
+Write your name below
+
+(force-input-box:2bind $name,&quot;=XX=&quot;,1,&quot;Karen&quot;)
+
+(live: 1s)[
+	(if: $name is &quot;Karen&quot;)[&lt;br/&gt;
+		&lt;p style=&quot;font-size:16px&quot;&gt;(ik very original, i very smart)&lt;/p&gt;
+		(live: 5s)[
+			(goto: &quot;jumpscare&quot;)]]]}]
+
+(if: $attackhelicopter is true)[{
+Write your name below
+
+(force-input-box:2bind $name,&quot;=XX=&quot;,1,&quot;Attack Helicopter&quot;)
+
+(live: 1s)[
+	(if: $name is &quot;Attack Helicopter&quot;)[
+		&lt;p style=&quot;font-size:16px&quot;&gt;(ik very original, i very smart)&lt;/p&gt;
+		(live: 5s)[
+			(goto: &quot;jumpscare&quot;)]]]}]}</tw-passagedata><tw-passagedata pid="3" name="jumpscare" tags="" position="663,243" size="100,100">&lt;img src=&quot;jumpscares/1.jpg&quot;&gt;
+
+(live: 2s)[(goto: &quot;start story&quot;)]</tw-passagedata><tw-passagedata pid="4" name="start story" tags="checkpoint major-story-changes" position="833,308" size="200,200">{(set: $checkpoint to 1)Your name is $name, a popular meme, but you are sick of being a meme so you decide to seek revenge of all memes that hurt your feelings bc you died and got replaced.}
 
 [[Go to a school]]
 [[Find some memes]]</tw-passagedata><tw-passagedata pid="5" name="Go to a school" tags="" position="713,528" size="100,100">You decide to goto a nearby school named Avondale School. It is nostagic in a bad way. Your hands start to become clamy as you begin to sweat. You see Dorime over by the gates, he is too far away for him to see you.
@@ -137,18 +173,22 @@ Next
 (mouseover: &quot;Next&quot;)[
 	(goto: &quot;death&quot;)]</tw-passagedata><tw-passagedata pid="24" name="In the school" tags="checkpoint major-story-changes" position="592,1440" size="200,200">{(save-game: &quot;Slot 1&quot;)
 (set: $checkpoint to 2)
-You open the gates and walk through towards the school, you can feel  something crwaling on your back.}
+You open the gates and walk through towards the school, you can feel  something crawling on your back, it gets every by every step you take into the school.}
 
 [[Left]] Towards the high school
 [[Right]] Towards the primary school
 </tw-passagedata><tw-passagedata pid="25" name="startup" tags="startup" position="137,97" size="200,100">(set: $passages to 46)
-(set: $links to 55)</tw-passagedata><tw-passagedata pid="26" name="coming soon" tags="" position="119,303" size="100,100">Hey, currently the passage you just entered isnt quite finished. It can take a while for me to write/program. So please be patient and wait for the the next update :)
+(set: $links to 55)
+(set: $randomEvents to 5)
+(set: $pictures to 9)</tw-passagedata><tw-passagedata pid="26" name="coming soon" tags="" position="119,303" size="100,100">Hey, currently the passage you just entered isnt quite finished. It can take a while for me to write/program. So please be patient and wait for the the next update :)
 
 //Restarting Story//
 
 (live: 10s)[
 	(goto: &quot;start&quot;)]</tw-passagedata><tw-passagedata pid="27" name="Story stats if you want them." tags="" position="514,20" size="100,100">Amount of Passages: $passages
 Amount of links: $links (plus quite a few)
+Amount of random events: $randomEvents
+Amount of pictures: $pictures
 
 [[Back-&gt;start]]</tw-passagedata><tw-passagedata pid="28" name="Left" tags="" position="472,1590" size="100,100">You move towards the high school. The place is deserted. You see people walking around the area. The breeze is open as you feel it washing your hair. As you walk around the office a loud siren begins to ring.
 
@@ -167,7 +207,7 @@ Amount of links: $links (plus quite a few)
 [[try to deal with them]]</tw-passagedata><tw-passagedata pid="32" name="Be poliete and sorry" tags="" position="322,1890" size="100,100">You decide to be polite to the office lady. She stops the alarm. &quot;Im sorry but you cant enter the school without a pass&quot;
 &quot;Ok thats fine, i could i please get one?&quot; You ask polietely. You begin to sweat as is you have never talked to a person before.
 &quot;Of course.&quot; She replied happily. She begins to write on the computer. &quot;So whats your name?&quot;
-&quot;Oh its jeff.&quot; You replied, you are getting more tired by each word you say.
+&quot;Oh its $name.&quot; You replied, you are getting more tired by each word you say.
 &quot;Haha, i like that meme,&quot; She said laughing.
 &quot;Haha, so do i.&quot; You say as polietely as possible. You are beginning to feel angrier.
 
@@ -184,7 +224,15 @@ You have gained entry in to the high school
 
 [[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="36" name="school jumpscare" tags="" position="247,2190" size="100,100">&lt;img src=&quot;jumpscares/7.jpg&quot;&gt;
 
-(live: 2s)[(goto: &quot;in the high school&quot;)]</tw-passagedata><tw-passagedata pid="37" name="in the high school" tags="" position="1202,2334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="Run away" tags="" position="580,1886" size="100,100">You decide to run away from the fight but they are too fast. You are begining to run out of breath.
+(live: 2s)[(goto: &quot;in the high school&quot;)]</tw-passagedata><tw-passagedata pid="37" name="in the high school" tags="" position="1202,2334" size="100,100">You move into the high school. There are people of all kinds. Meme lords, living memes, and regular people. People are running around everywhere you look. A little kid tugs on your sleeves.
+{(if: $female is true)[&quot;Hey miss, what are you doing here?&quot; The little girl asks.]
+(if: $male is true)[
+	&quot;Hey mister, what are you doing here?&quot; The little boy asks.]
+(if: $attackhelicopter is true)[
+	&quot;What is an attack helicopter doing here?????&quot; The little thing asks]}
+
+[[Be polite to the child]]
+[[Be rude to the child]]</tw-passagedata><tw-passagedata pid="38" name="Run away" tags="" position="580,1886" size="100,100">You decide to run away from the fight but they are too fast. You are begining to run out of breath.
 
 [[Fight-&gt;try to deal with them]]
 [[Keep running]]</tw-passagedata><tw-passagedata pid="39" name="try to deal with them" tags="" position="740,1884" size="100,100">You decided to try to get rid of them.
@@ -213,7 +261,22 @@ You have gained entry in to the high school
 The alarms stops and you gained entry into the school
 
 [[Next-&gt;in the high school]]]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="47" name="Be polite to the child" tags="" position="1127,2484" size="100,100">{(if: $female is true)[
+	&quot;Im here for business&quot; You say polietely to the little girl]
+(if: $male is true)[
+	&quot;Im here for business&quot; You say polietely to the little boy]
+	(if: $attackhelicopter is true)[
+	&quot;Im here for business&quot; You say polietely to the little boy]}
+&quot;oh ok.&quot; the child said lightly. &quot;Do you know who I truely am?&quot;
+&quot;No I don&#39;t,&quot; You reply, while you reply the child reveals himself as SANESSS
+&lt;img src=&quot;jumpscares/9.jpg&quot;&gt;
+
+To be continued.</tw-passagedata><tw-passagedata pid="48" name="Be rude to the child" tags="" position="1277,2484" size="100,100">You be as rude to the child as possible. But because you have a unkeen eye you didnt notice that it was SANESS.
+&lt;img src=&quot;jumpscares/9.jpg&quot;&gt;
+
+Because you didn&#39;t notice him, he stabs you. You fall to the ground as blood. But before you did you use the water of life. But it failed and you still died.
+
+[[Next-&gt;death]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
