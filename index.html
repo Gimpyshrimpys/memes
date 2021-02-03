@@ -92,8 +92,11 @@ Write your name below
 	(if: $name is &quot;Brock&#39;s trusty drying pan&quot;)[&lt;br/&gt;
 		&lt;p style=&quot;font-size:16px&quot;&gt;(ik very original, i very smart)&lt;/p&gt;
 		(live: 5s)[
-			(goto: &quot;jumpscare&quot;)]]]}]}</tw-passagedata><tw-passagedata pid="3" name="jumpscare" tags="" position="663,243" size="100,100">&lt;img src=&quot;jumpscares/1.jpg&quot;&gt;
-
+			(goto: &quot;jumpscare&quot;)]]]}]}</tw-passagedata><tw-passagedata pid="3" name="jumpscare" tags="" position="663,243" size="100,100">{(set: _event to (random: 1, 10))
+(if: _event is 2)[
+&lt;img src=&quot;jumpscares/1.jpg&quot;&gt;]
+(else:)[
+&lt;img src=&quot;jumpscares/11.jpg&quot;&gt;]
 (live: 2s)[(goto: &quot;start story&quot;)]</tw-passagedata><tw-passagedata pid="4" name="start story" tags="checkpoint major-story-changes" position="833,308" size="200,200">{(set: $checkpoint to 1)(save-game: &quot;Slot 1&quot;)Your name is $name, a popular meme, but you are sick of being a meme so you decide to seek revenge of all memes that hurt your feelings bc you died and got replaced.}
 
 [[Go to a school]]
@@ -198,7 +201,7 @@ You open the gates and walk through towards the school, you can feel  something 
 </tw-passagedata><tw-passagedata pid="25" name="startup" tags="startup" position="137,97" size="200,100">{(set: $passages to 58)
 (set: $links to 70)
 (set: $randomEvents to 6)
-(set: $pictures to 10)
+(set: $pictures to 11)
 (set: $lastupdate to &#39;8:30&#39;)
 (set: $gameversion to &quot;0.6&quot;)
 &lt;!--Other stuff--&gt;
