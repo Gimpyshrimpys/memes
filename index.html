@@ -131,7 +131,7 @@ You got bruitally murdered by pikachu
 [[Take it out]]</tw-passagedata><tw-passagedata pid="12" name="No" tags="" position="938,828" size="100,100">Dorime begins to get angry as he pulls outa bloody knife out of his fur. In an instance you sudden appear in a parking lot. Its cold as you feel water into go into your socks, water vapor comes out of your mouth as dorime appears as a ghostly figure.
 
 [[Try to take dorimes knife]]
-[[Prepare to block dorime]]</tw-passagedata><tw-passagedata pid="13" name="Try to take dorimes knife" tags="" position="1000,969" size="100,100">You try to take dorime&#39;s knife, as your hand just goes straight through it, it is highly translucent. The knife has blood on the tip and dorime has blue blood on his fur.
+[[Prepare to block dorime]]</tw-passagedata><tw-passagedata pid="13" name="Try to take dorimes knife" tags="" position="988.3333333333334,948" size="100,100">You try to take dorime&#39;s knife, as your hand just goes straight through it, it is highly translucent. The knife has blood on the tip and dorime has blue blood on his fur.
 
 (live: 10s)[
 	Without time to act dorime pierces your heart at extreme speeds there is nothing you can do as you fall to the ground in agony.
@@ -146,11 +146,16 @@ You got bruitally murdered by pikachu
 	[[Yes-&gt;take gods power]]
 	[[No-&gt;no dorime]]]</tw-passagedata><tw-passagedata pid="15" name="death" tags="" position="253,307" size="100,100">&lt;img src=&quot;jumpscares/6.jpg&quot;&gt;
 
-//Loading Checkpoint//
-
-(live: 5s)[
-	(load-game: &quot;Slot 1&quot;)]
-	</tw-passagedata><tw-passagedata pid="16" name="take gods power" tags="" position="970,1138" size="100,100">{(save-game: &quot;Slot 1&quot;)You transcend into a being, second to god, you feel power rush to your brain. Your brain is overloaded by the infomation as you get a headache and begin to feel nauseous and fall unconcious.}
+(after:15s)[
+(link: &quot;Reset to checkpoint&quot;)[(load-game: &quot;Slot 1&quot;)]
+(if:visits is 10)[
+hmm. that expression...
+that&#39;s the expression of someone who&#39;s died ten times in a row.
+hey, congrats! the big one-oh!
+let&#39;s invite all your friends over for a big shindig.
+we can have pie, and hot dogs, and...
+hmmm... wait. something&#39;s not right.
+you don&#39;t have any friends.]]</tw-passagedata><tw-passagedata pid="16" name="take gods power" tags="" position="1071.6666666666667,1101.3333333333333" size="100,100">{(save-game: &quot;Slot 1&quot;)You transcend into a being, second to god, you feel power rush to your brain. Your brain is overloaded by the infomation as you get a headache and begin to feel nauseous and fall unconcious.}
 
 You awaken in a prison created in light, with your new found powers.
 
@@ -200,7 +205,7 @@ You open the gates and walk through towards the school, you can feel  something 
 [[Right]] Towards the primary school
 </tw-passagedata><tw-passagedata pid="25" name="startup" tags="startup" position="137,97" size="200,100">{(set: $passages to 58)
 (set: $links to 70)
-(set: $randomEvents to 7)
+(set: $randomEvents to 8)
 (set: $pictures to 11)
 (set: $lastupdate to &#39;8:26PM&#39;)
 (set: $gameversion to &quot;0.6.1&quot;)
@@ -213,7 +218,7 @@ You open the gates and walk through towards the school, you can feel  something 
 (live: 10s)[
 	(goto: &quot;start&quot;)]</tw-passagedata><tw-passagedata pid="27" name="Story stats if you want them." tags="" position="514,20" size="100,100">Amount of Passages: $passages
 Amount of links: $links (plus quite a few)
-Amount of random events: $randomEvents
+Amount of random events/hard to find events: $randomEvents
 Amount of pictures: $pictures
 
 [[Back-&gt;start]]</tw-passagedata><tw-passagedata pid="28" name="Left" tags="" position="472,1590" size="100,100">You move towards the high school. The place is deserted. You see people walking around the area. The breeze is open as you feel it washing your hair. As you walk around the office a loud siren begins to ring.
