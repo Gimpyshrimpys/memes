@@ -94,9 +94,9 @@ Write your name below
 		(live: 5s)[
 			(goto: &quot;jumpscare&quot;)]]]}]}</tw-passagedata><tw-passagedata pid="3" name="jumpscare" tags="" position="663,243" size="100,100">{(set: _event to (random: 1, 10))
 (if: _event is 2)[
-&lt;img src=&quot;jumpscares/1.jpg&quot;&gt;]
+&lt;img src=&quot;jumpscares/1.jpg&quot; width=&quot;600&quot; height=&quot;800&quot;&gt;]
 (else:)[
-&lt;img src=&quot;jumpscares/11.jpg&quot;&gt;]
+&lt;img src=&quot;jumpscares/11.jpg&quot; width=&quot;600&quot; height=&quot;800&quot; &gt;]
 (live: 2s)[(goto: &quot;start story&quot;)]}</tw-passagedata><tw-passagedata pid="4" name="start story" tags="checkpoint major-story-changes" position="833,308" size="200,200">{(set: $checkpoint to 1)(save-game: &quot;Slot 1&quot;)Your name is $name, a popular meme, but you are sick of being a meme so you decide to seek revenge of all memes that hurt your feelings bc you died and got replaced.}
 
 [[Go to a school]]
@@ -202,8 +202,8 @@ You open the gates and walk through towards the school, you can feel  something 
 (set: $links to 70)
 (set: $randomEvents to 7)
 (set: $pictures to 11)
-(set: $lastupdate to &#39;8:30&#39;)
-(set: $gameversion to &quot;0.6&quot;)
+(set: $lastupdate to &#39;8:26PM&#39;)
+(set: $gameversion to &quot;0.6.1&quot;)
 &lt;!--Other stuff--&gt;
 
 (set: $shiny to &quot;(text-colour:#ffd8a8)[SHINY SANESSS]&quot;)}</tw-passagedata><tw-passagedata pid="26" name="coming soon" tags="" position="119,303" size="100,100">Hey, currently the passage you just entered isnt quite finished. It can take a while for me to write/program. So please be patient and wait for the the next update :)
@@ -248,7 +248,7 @@ You have gained entry in to the high school
 
 [[Exit the door-&gt;school jumpscare]]</tw-passagedata><tw-passagedata pid="35" name="Become too angry" tags="" position="440,1881" size="100,100">You become angry at the lady and releases Cheemes. But the lady hurts Cheemes so Cheemes begins to get anger and kills himself. You are deeply sad, but the lady still isnt dead so you use a pokeball to capture hur. It failed and she kills you.
 
-[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="36" name="school jumpscare" tags="" position="247,2190" size="100,100">&lt;img src=&quot;jumpscares/7.jpg&quot;&gt;
+[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="36" name="school jumpscare" tags="" position="247,2190" size="100,100">&lt;img src=&quot;jumpscares/7.jpg&quot; width=&quot;600&quot; height=&quot;600&quot; &gt;
 
 (live: 2s)[(goto: &quot;in the high school&quot;)]</tw-passagedata><tw-passagedata pid="37" name="in the high school" tags="" position="1202,2334" size="100,100">{(set: $checkpoint to 3)(save-game: &quot;Slot 1&quot;)You move into the high school. There are people of all kinds. Meme lords, living memes, and regular people. People are running around everywhere you look. A little kid tugs on your sleeves.}
 (if: $female is true)[&quot;Hey miss, what are you doing here?&quot; The little girl asks.]
