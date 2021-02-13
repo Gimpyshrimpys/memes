@@ -33,18 +33,7 @@ Game Version: V$gameversion
 &lt;p style=&quot;font-size:16px&quot;&gt;Tip: If there are no buttons on screen at any just wait 5-10 seconds and something would probably happen.&lt;/p&gt;
 
 [[Story stats if you want them.]]
-
-(mouseover: &quot;Game Version&quot;)[(goto: &quot;Patch notes&quot;)]
-
-
-
-
-
-
-
-
-
-[[Admin/Owner stuff]]</tw-passagedata><tw-passagedata pid="2" name="true start" tags="" position="775,100" size="100,200">{(set: _event to (random: 1,4))
+</tw-passagedata><tw-passagedata pid="2" name="true start" tags="" position="784,126" size="100,100">{(set: _event to (random: 1,4))
 (if: _event is 1)[
 	(set: $male to true)
 	(set: $female to false)
@@ -117,7 +106,7 @@ Write your name below
 [[Take out a 22. slug gun for a painful death]]
 [[Take out a 50 calibur Barrette for a fast death]]
 [[Approch him]]
-[[Attempt to Sneak past him]] (25% success chance)</tw-passagedata><tw-passagedata pid="6" name="Find some memes" tags="need-to-do" position="1853,555.6666666666666" size="100,100">If you want you can choose the other option, that is where i have put in the most work so far. This part ist finished yet.
+[[Attempt to Sneak past him]] (25% success chance)</tw-passagedata><tw-passagedata pid="6" name="Find some memes" tags="need-to-do" position="1528,1364" size="100,100">If you want you can choose the other option, that is where i have put in the most work so far. This part ist finished yet.
 
 [[OK-&gt;Go to a school]]
 (link: &quot;Don&#39;t&quot;)[(goto: &quot;pokemon is kill&quot;)]</tw-passagedata><tw-passagedata pid="7" name="Take out a 22. slug gun for a painful death" tags="" position="613,684" size="100,100">You see dorime and take out a 22. rifle. You begin to cock the barrel and load in a slug. You begin to take aim but as you look down you scope, dorime disappears as if he is a ghost. you have a look again with your own eyes and, hes there. So you try to aim the rifle at dorime without using the scope, there is a water like mist resinating off him.
@@ -156,14 +145,26 @@ You got bruitally murdered by pikachu
 	//REEEEE//
 	You look up as a rain of blue blood covers you. It feels like that cheap slime that you buy from target. &quot;I dont like to see good memes die so quickily. Please, have a fraction of my power. Will you take it?&quot;
 	[[Yes-&gt;take gods power]]
-	[[No-&gt;no dorime]]]</tw-passagedata><tw-passagedata pid="15" name="death" tags="" position="253,307" size="100,100">(set: _event to (random: 1, 10))(if: _event is 3)[&lt;script&gt;deleteSaveSlot(&quot;Slot 1&quot;);&lt;/script&gt;(goto: &quot;start&quot;)]&lt;img src=&quot;jumpscares/6.jpg&quot;&gt;
+	[[No-&gt;no dorime]]]</tw-passagedata><tw-passagedata pid="15" name="death" tags="" position="253,307" size="100,100">&lt;img src=&quot;jumpscares/6.jpg&quot;&gt;
 
 //Loading Game//
 
-(link: &quot;Reset to checkpoint&quot;)[(load-game: &quot;Slot 1&quot;)]
-(after:15s)[
-What are you doing here? What are you. How did you know about this? Did the owner tell you about this, you shouldnt have came here. LEAVE (mouseover: &quot;LEAVE&quot;)[(load-game: &quot;Slot 1&quot;)]]
-</tw-passagedata><tw-passagedata pid="16" name="take gods power" tags="" position="1071,1101" size="100,100">{(save-game: &quot;Slot 1&quot;)You transcend into a being, second to god, you feel power rush to your brain. Your brain is overloaded by the infomation as you get a headache and begin to feel nauseous and fall unconcious.}
+(after: 5s)[(link: &quot;Reset to checkpoint&quot;)[(load-game: &quot;Slot 1&quot;)]]
+{(after:15s)[
+(if:visits is 10)[
+hmm. that expression...
+that&#39;s the expression of someone who&#39;s died ten times in a row.
+hey, congrats! the big one-oh!
+let&#39;s invite all your friends over for a big shindig.
+we can have pie, and hot dogs, and...
+hmmm... wait. something&#39;s not right.
+you don&#39;t have any friends.]
+(if: visits is 5)[
+	hmm. that expression...
+that&#39;s the expression of someone who&#39;s died five times in a row.
+convenient, huh? that&#39;s one for each finger.
+but soon...
+you&#39;ll need a cool mutant hand to count all of your deaths.]]}</tw-passagedata><tw-passagedata pid="16" name="take gods power" tags="" position="1071,1101" size="100,100">{(save-game: &quot;Slot 1&quot;)You transcend into a being, second to god, you feel power rush to your brain. Your brain is overloaded by the infomation as you get a headache and begin to feel nauseous and fall unconcious.}
 
 You awaken in a prison created in light, with your new found powers.
 
@@ -211,15 +212,15 @@ You open the gates and walk through towards the school, you can feel  something 
 
 [[Left]] Towards the high school
 [[Right]] Towards the primary school
-</tw-passagedata><tw-passagedata pid="25" name="startup" tags="startup" position="137,97" size="200,100">{(set: $passages to 71)
-(set: $links to 90)
-(set: $randomEvents to 13)
-(set: $pictures to 13)
-(set: $lastupdate to &#39;8:48PM&#39;)
-(set: $gameversion to &quot;0.7&quot;)
+</tw-passagedata><tw-passagedata pid="25" name="startup" tags="startup" position="137,97" size="200,100">{(set: $passages to 59)
+(set: $links to 74)
+(set: $randomEvents to 9)
+(set: $pictures to 11)
+(set: $lastupdate to &#39;8:26PM&#39;)
+(set: $gameversion to &quot;0.6.2&quot;)
 &lt;!--Other stuff--&gt;
 
-(set: $shiny to &quot;(text-colour:#ffd8a8)[SHINY SANESSS]&quot;)}</tw-passagedata><tw-passagedata pid="26" name="coming soon" tags="" position="119,303" size="100,100">The passage you just tried to visit is currently unavalible and might come in the next update. Btw these stories take a long time to write so please dont harass me about this.  
+(set: $shiny to &quot;(text-colour:#ffd8a8)[SHINY SANESSS]&quot;)}</tw-passagedata><tw-passagedata pid="26" name="coming soon" tags="" position="119,303" size="100,100">Hey, currently the passage you just entered isnt quite finished. It can take a while for me to write/program. So please be patient and wait for the the next update :)
 
 //Restarting Story//
 
@@ -232,7 +233,7 @@ Amount of pictures: $pictures
 [[Back-&gt;start]]</tw-passagedata><tw-passagedata pid="28" name="Left" tags="" position="472,1590" size="100,100">You move towards the high school. The place is deserted. You see people walking around the area. The breeze is open as you feel it washing your hair. As you walk around the office a loud siren begins to ring.
 
 [[Goto the office to avoid disturbance]]
-[[Let it happen]]</tw-passagedata><tw-passagedata pid="29" name="Right" tags="need-to-do" position="2817.666666666667,1503.6666666666665" size="100,100">This option is still being written, if you want you can choose the other option, that is where i have put in the most work so far.
+[[Let it happen]]</tw-passagedata><tw-passagedata pid="29" name="Right" tags="need-to-do" position="1526,1502" size="100,100">This option is still being written, if you want you can choose the other option, that is where i have put in the most work so far.
 
 [[OK-&gt;Left]]
 (link: &quot;Don&#39;t&quot;)[(goto: &quot;pokemon is kill&quot;)]</tw-passagedata><tw-passagedata pid="30" name="Goto the office to avoid disturbance" tags="" position="397,1740" size="100,100">You walk into the office as someone greets you. &quot;Did you not know to goto the office?&quot; One of the office ladies say poilitely. 
@@ -318,8 +319,7 @@ Because you didn&#39;t notice him, he stabs you. You fall to the ground as blood
 
 [[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="49" name="Ask SANESSSSSS join up" tags="" position="1052,2634" size="100,100">{(set: _shiny to &quot;hell&quot;)
 (set: _photo to &quot;hell&quot;)
-(save-game: &quot;Slot 1&quot;)
-(set: _event to (random: 1, 256))
+(set: _event to (random: 1, 56))
 (if: _event is 2)[
 	(set: _shiny to &quot;//You caught the $shiny//&quot;)
 	(set: _photo to &#39;&lt;img src=&quot;jumpscares/10.jpg&quot;&gt;&#39;)]
@@ -337,15 +337,13 @@ You move forward into the school, and stumble across the school oval you see the
 
 [[Go towards the basketball players-&gt;Basketball]]
 [[Go towards the volleyball team-&gt;Volleyball]]
-[[Go bully the year 7 students]]
-
-</tw-passagedata><tw-passagedata pid="50" name="Attempt to kill SANESSSSSS" tags="" position="1202,2634" size="100,100">(save-game: &quot;Slot 1&quot;)You decide to kill SANESSS. You feel like your about to have a bad time.
+[[Go bully the year 7 students]]</tw-passagedata><tw-passagedata pid="50" name="Attempt to kill SANESSSSSS" tags="" position="1202,2634" size="100,100">(save-game: &quot;Slot 1&quot;)You decide to kill SANESSS. You feel like your about to have a bad time.
 
 //The easiest enemy. Can only deal 1 damage.//
 
 Before you could leap into battle the enemy attacks.
 
-[[Next-&gt;Battle]]</tw-passagedata><tw-passagedata pid="51" name="Battle" tags="" position="1202,2784" size="100,200">{(set: $health to 40)(set: $karma to false)
+[[Next-&gt;Battle]]</tw-passagedata><tw-passagedata pid="51" name="Battle" tags="" position="1202,2784" size="100,100">{(set: $health to 40)(set: $karma to false)
 (live: 1s)[
 	(if: $health is 0)[
 		(goto: &quot;death&quot;)]
@@ -378,39 +376,21 @@ i n h e l l&quot;
 
 (live: 60s)[
 	(goto: &quot;after saness fight&quot;)]
-</tw-passagedata><tw-passagedata pid="52" name="after saness fight" tags="" position="1636,2797" size="100,100">You keep on feeling goosebumps after you massecred sans. You try to keep on moving forward but you keep on hearing a voice in your head saying &quot;Get more L O V E.&quot; You see a silhouette of the another world and before you even knew it you were in... //THE  M E M E  WORLD//. You are on a in a long corridor, but the walls are void only the corridor is in this world. You keep on walking until you see a large skeleton of a person sitting on the ground. 
-
-[[Leave the poor skeleton on the ground-&gt; DONT KICK THE BICH]]
-[[Harass the skeleton-&gt;Bully the bich]]
-[[Kick the skeleton-&gt;KICK THE BICH]]
-[[Pick up the skeleton-&gt;kidnap the bich]]</tw-passagedata><tw-passagedata pid="53" name="Basketball" tags="" position="967,2797" size="100,100">You move towards the basketball court with your swag and your Sans. &quot;Hey man do you wanna play with us?&quot; One of the kids say.
+</tw-passagedata><tw-passagedata pid="52" name="after saness fight" tags="" position="1190,2906" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="53" name="Basketball" tags="" position="967,2797" size="100,100">You move towards the basketball court with your swag and your Sans. &quot;Hey man do you wanna play with us?&quot; One of the kids say.
 
 [[Be confident]]
-[[Leave]]</tw-passagedata><tw-passagedata pid="54" name="Volleyball" tags="" position="650,2850" size="100,100">You go towards the volleybal courts and see a group of 5 players. You notice the ball is going at fast smashing into the ground.
-{(if: $male is true)[
-	&quot;Hey man, do you want to play with us.&quot; You hear from behind you.]
-(if: $female is true)[
-	&quot;Hey miss, do you want to play wiht us.&quot; You hear from behind you.]
-(if: $attackhelicopter)[
-	&quot;What the hell are you?&quot; You hear from behind you.
-	&quot;Who are yo to judge you say to the kid.&quot;]}
-
-
-[[Be confident-&gt;volleyballeeeee]]
-[[Leave]]</tw-passagedata><tw-passagedata pid="55" name="Go bully the year 7 students" tags="" position="831,2604" size="100,100">You go bully the year 7 students in the tennis courts.
+[[Leave]]
+(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="54" name="Volleyball" tags="" position="738,2782" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="55" name="Go bully the year 7 students" tags="" position="831,2604" size="100,100">You go bully the year 7 students in the tennis courts.
 &quot;Could I please play&quot; you ask one of the kids as you move towards him at alarming rates.
 &quot;Yes&quot; the child squeels as you kick the racket and hit one of the volleyball players. They all look at you confused. 
 &quot;Ok Serve&quot; you ask the child on the other side of the court. He proceeds to throw the ball into the air and hits it with his racket. You then procides to catch the ball and kick it onto the roof of the nearby classroom. All of the nearby students stare at you.
 
 [[Kill the children]]
-[[Walk away]]</tw-passagedata><tw-passagedata pid="56" name="Kill the children" tags="" position="1225,3250" size="100,100">{(set: _event to (random: 1, 5))
-(if: _event is 2)[
-	You release sans and he massecres every single child there you feel very happy and all the other people around you begin cheering for you. You remember just how annoying the past year 7 students were when you went to avonjail. [[Next-&gt;aftercourts]]]
-(else:)[You release sans and he massecres every child other than one and you hit him with a pokeball and destroy the pokeball. Everyone begins cheering for you. You begin to remeber your horrible memories of the past year 7 children.[[Next-&gt;aftercourts]]]}</tw-passagedata><tw-passagedata pid="57" name="Walk away" tags="" position="925,2435" size="100,100">You walk away from the children.
+[[Walk away]]</tw-passagedata><tw-passagedata pid="56" name="Kill the children" tags="" position="711,2662" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="57" name="Walk away" tags="" position="925,2435" size="100,100">You walk away from the children.
 
 [[Go towards the basketball players-&gt;Basketball]]
 [[Go towards the volleyball team-&gt;Volleyball]]
-[[Go bully the year 7 students]]</tw-passagedata><tw-passagedata pid="58" name="Be confident" tags="" position="967,2947" size="100,100">(save-game: &quot;Slot 1&quot;)&quot;Yea, ok why not. But i will beat you.&quot; You say confidently as you strive towards the children.
+[[Go bully the year 7 students]]</tw-passagedata><tw-passagedata pid="58" name="Be confident" tags="" position="967,2947" size="100,100">&quot;Yea, ok why not. But i will beat you.&quot; You say confidently as you strive towards the children.
 &quot;Ok then, i challenge you to a pokemon battle!!!!&quot; One of the children reply.
 You repeat what you said as you both move several metres away and strike a powerful jojo pose, and both yell.
 
@@ -423,10 +403,10 @@ You repeat what you said as you both move several metres away and strike a power
 	&quot;Oh no its god,&quot; you think to yourself.]
 The battle commences}
 
-[[Next-&gt;acreusfight]]</tw-passagedata><tw-passagedata pid="59" name="acreusfight" tags="" position="967,3097" size="100,200">{(if: visits is 1)[(set: $sanshealth to 25)
+[[Next-&gt;acreusfight]]</tw-passagedata><tw-passagedata pid="59" name="acreusfight" tags="" position="967,3097" size="100,100">{(if: visits is 1)[(set: $sanshealth to 20)
 (set: $arceushealth to 30)]
 (after: 0.5s)[
-(live: 0.1s)[
+(live: 1s)[
 	(if: $sanshealth &lt; 1)[
 		(goto: &quot;death&quot;)]
 	(if: $arceushealth &lt; 1)[
@@ -434,22 +414,22 @@ The battle commences}
 	(replace: ?sanshealth)[$sanshealth]
 	(replace: ?arceushealth)[$arceushealth]]]
 		
-}Sans health:|sanshealth&gt;[25]
+}Sans health:|sanshealth&gt;[20]
 Arceus Health: |arceushealth&gt;[30]
 
 (link: &quot;Attack&quot;)[
 	(link: &quot;Bone&quot;)[{
-			(set: $arceushealth to it - (random: 3, 8))
+			(set: $arceushealth to it - (random: 1, 5))
 			(set: $sanshealth to it - (random: 2, 4))
 			(live: 1s)[
 			(goto: &quot;acreusfight&quot;)]}]
 		(link: &quot;Soul Change&quot;)[
-			{(set: $arceushealth to it - (random: 4, 6))
+			{(set: $arceushealth to it - (random: 2, 3))
 			(set: $sanshealth to it - (random: 2, 5))
 			(live: 1s)[
 			(goto: &quot;acreusfight&quot;)]}]
 		(link: &quot;Boner&quot;)[
-			{(set: $arceushealth to it - (random: 4, 8))
+			{(set: $arceushealth to it - (random: 4, 5))
 			(set: $sanshealth to it - (random: 0, 6))
 			(live: 1s)[
 			(goto: &quot;acreusfight&quot;)]}]
@@ -467,68 +447,11 @@ Arceus Health: |arceushealth&gt;[30]
 		(mouseover:&quot;you won&quot;)[(goto: &quot;afterfighta&quot;)]}]
 	(else:)[
 		You werent able to take out a gun and were hit.
-		(set: $sanshealth to it - (random: 5, 10))]]</tw-passagedata><tw-passagedata pid="60" name="afterfighta" tags="" position="1900,3400" size="200,100">You defeated arceus and you beat the child with a belt.
-
-Sans is tired
-
-[[Next-&gt;aftercourts]]</tw-passagedata><tw-passagedata pid="61" name="Leave" tags="" position="1087,2947" size="100,100">You walk away from the children.
+		(set: $sanshealth to it - (random: 5, 10))]]</tw-passagedata><tw-passagedata pid="60" name="afterfighta" tags="" position="1031.6666666666667,3320.0000000000005" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="61" name="Leave" tags="" position="1087,2947" size="100,100">You walk away from the children.
 
 [[Go towards the basketball players-&gt;Basketball]]
 [[Go towards the volleyball team-&gt;Volleyball]]
-[[Go bully the year 7 students]]</tw-passagedata><tw-passagedata pid="62" name="Patch notes" tags="" position="664,43" size="100,100">&lt;-----Patch Notes-----&gt;
-        V1.0 
-		
-Im finally pretty happy with this app and I&#39;m thinking about discontinuing this little game but anyways, these are the patch notes. &lt;/br&gt;&lt;/br&gt;Finished the corridor part. &lt;/br&gt;New Instant death random chance&lt;/br&gt; Started work on the &quot;Find some memes&quot; Link so get prepared for that :)
-
-[[Back-&gt;start]]</tw-passagedata><tw-passagedata pid="63" name="TODO" tags="" position="1051,69" size="200,200">Make more easter eggs
-actually start doing the primary school...
-</tw-passagedata><tw-passagedata pid="64" name="Admin/Owner stuff" tags="" position="323,0" size="100,100">(input-box:2bind $E,&quot;=XX=&quot;,1)
-
-[[Back-&gt;start]]
-
-
-(live: 0.1s)[
-(if: $E is &quot;pippins&quot;)[
-	(goto: &quot;IGNORE THIS YOU GAE&quot;)
-	(goto: &quot;start&quot;)]]</tw-passagedata><tw-passagedata pid="65" name="volleyballeeeee" tags="" position="600,3050" size="100,100">&quot;Yea sure why not,&quot; You reply to the kid.
-As he spikes a wooden spike right into your chest.
-
-They all yell &quot;Nice Kill&quot;
-//Yeeeeeeeee//
-&lt;img src=&quot;jumpscares/2.jpg&quot;&gt;
-
-[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="66" name="aftercourts" tags="" position="1900,3550" size="200,200">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="67" name=" DONT KICK THE BICH" tags="" position="1926,2228" size="100,100">You dont kick the skeleton and move forward. You are feeling like there is someone behind you so, you slowly look behind you, and, it, was, nobody. So you keep on moving down the corridor. 
-
-[[Next-&gt;reeeeeeeeeeeeeeeeeeeeeeeeeeeeeee]]</tw-passagedata><tw-passagedata pid="68" name="Bully the bich" tags="" position="1721,2163" size="100,100">&quot;Haha nerd. Imagine dying.&quot; You said to the skeleton. The skeleton begins to cry as it gets up and screeches into the void. The skeleton runs towards you he then screeches for the last time as he grabs you and you both jump off into the void while the skeleton is still weeping.
-
-(after: 15s)[
-	[[Next-&gt;death]]]</tw-passagedata><tw-passagedata pid="69" name="KICK THE BICH" tags="" position="1776,2885" size="100,100">(set: $PLEASEENDMYLIFEEEEEEEEEEEEEEEEEEEE to (random:1,5))You pick up the skeleton by their smooth skull and drop kick a field goal into the void below. You begin to move on, you look behind you and you see the skeleton right behind you. But the skeleton is holding something golden. He raises it and before you can react, 
-(after: 7s)[\
-(if: $PLEASEENDMYLIFEEEEEEEEEEEEEEEEEEEE is 3)[
-	&lt;img src=&quot;jumpscares/12.jpg&quot;&gt;]
-(else:)[&lt;img src=&quot;jumpscares/13.jpg&quot;&gt;]
-
-//&#39;&#39;DOOT DOOT&#39;&#39;//
-
-You fall into the void you begin to fall forever. The darkness doesnt end.
-
-[[Next-&gt;death]]]</tw-passagedata><tw-passagedata pid="70" name="kidnap the bich" tags="" position="1575.3333333333333,3055" size="100,100">You steal the skeleton and it begins to scream in your hands and you tear him apart to put him into your bag. It keeps screaming in your bag so you chuck the bag into the abyss below.
-
-You keep on moving forward the corridor.
-
-[[Next-&gt;gae corridor shit]]</tw-passagedata><tw-passagedata pid="71" name="gae corridor shit" tags="" position="1826,2057" size="100,100">You move forward until you see a loona, she is being surrounded by the blackness of the void. Your insticts instantly tells you to bow as she throws you into the void. 
-
-&lt;p style=&quot;font-size: 16px&quot;&gt;STAN LOONA&lt;/p&gt;
-
-You keep on falling, and falling over and over again.
-
-Until, you die
-
-[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="72" name="reeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" tags="" position="1926,2378" size="100,100">You keep on walking through the pitch black corridor.
-
-Until you suddenly see some kind of light within your sight. You run towards the light. You keep on running and running until you appear to be back into your old world. But in the time you havent realised that your in the ability of Golden experience requiem &quot;Return to zero&quot; ability and everying you had done up to this point is for nothing.
-
-(link: &quot;Next&quot;)[&lt;script&gt;deleteSaveSlot(&quot;Slot 1&quot;);&lt;/script&gt;(goto: &quot;start&quot;)]</tw-passagedata></tw-storydata>
+[[Go bully the year 7 students]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
