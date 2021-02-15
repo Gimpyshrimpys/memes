@@ -13,12 +13,12 @@
  visibility: hidden
 }
 tw-passage {font-family: Futura;}
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Choose a story" tags="" position="412,189" size="200,200">&lt;h2&gt;Choose a story&lt;/h2&gt;(load-game: &quot;Slot 1&quot;)
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Choose a story" tags="" position="412,189" size="200,200">&lt;h2&gt;Choose a story&lt;/h2&gt;(if: (saved-games:) contains &quot;Z&quot;)[(loadgame: &quot;Z&quot;)]
 &lt;p style=&quot;font-size:16px&quot;&gt;I plan to make more story and even make people make storys, so this is basically where they will all live&lt;/p&gt;
 
 (link-repeat: &quot;Meme Apocalypse&quot;)[
 	(set: $meme to it + 1)
-	(save-game: &quot;Slot 1&quot;)
+	(save-game: &quot;Z&quot;)
 	(goto-url: &quot;https://cheemes.netlify.app/meme/meme.html&quot;)]
 You have played this $meme times
 
