@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Elmo&#39;s trilogy.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Elmo&#39;s trilogy" startnode="1" creator="Twine" creator-version="2.3.13" ifid="645D437E-600D-4905-889E-F74064C0BDBB" zoom="0.6" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="Elmo&#39;s trilogy" startnode="21" creator="Twine" creator-version="2.3.13" ifid="645D437E-600D-4905-889E-F74064C0BDBB" zoom="0.6" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
  visibility: hidden
 }
 tw-passage {font-family: Futura;}
@@ -28,16 +28,10 @@ tw-story {color: Black;
 
 
 (link: &quot;Go back to story select&quot;)[{
-	(goto-url: &quot;https://cheemes.netlify.app/&quot;)}]</tw-passagedata><tw-passagedata pid="2" name="footer" tags="" position="175,175" size="200,100">{
-(if: (passage:)&#39;s tag contains &quot;nobackbutton&quot;)[&lt;!--NIL--&gt;]
+	(goto-url: &quot;https://cheemes.netlify.app/&quot;)}]</tw-passagedata><tw-passagedata pid="2" name="footer" tags="footer" position="175,175" size="200,100">(if: (passage:)&#39;s tags contains &quot;nobackbutton&quot;)[&lt;!--NIL--&gt;]
 (else:)[
-
-(link: &quot;Go back to story select&quot;)[{
-	(goto-url: &quot;https://cheemes.netlify.app/&quot;)
-	($loading:)}]]}
-	
-{
-}</tw-passagedata><tw-passagedata pid="3" name="startup" tags="startup" position="175,300" size="200,100"></tw-passagedata><tw-passagedata pid="4" name="What the hell am i doing??????" tags="nobackbutton" position="700,200" size="100,200">{(set: _event to (random: 1,5))
+	(link: &quot;To story selection&quot;)[
+		(goto-url: &quot;https://cheemes.netlify.app/&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="startup" tags="startup" position="175,300" size="200,100"></tw-passagedata><tw-passagedata pid="4" name="What the hell am i doing??????" tags="nobackbutton" position="700,200" size="100,200">{(set: _event to (random: 1,5))
 (if: _event is 1)[
 	(set: $male to true)
 	(set: $female to false)
@@ -119,12 +113,12 @@ Write your name below
 
 (after: 15s)[You have been drafted into bikini bottoms reserve army. You are the last resort of bikini bottom for good reason. You are known as the best warrior in all of bikin bottom. You train daily for the very moment you are asked to go to war. This, is the very day.]
 
-(after: 23s)[You, have been asked to infiltrate the elmonians&#39; main base to find infomation. You are armed with a barronet, a AK48 and a small butterfly knife.]
+(after: 23s)[You, have been asked to infiltrate the elmonians&#39; main base to find infomation. You are armed with a barronet, a AK48 and a small butterfly knife. The mission must be secret, most people in bikini bottom currently worship elmo.]
 
 [[Ask not to go-&gt;The motherland is angry]]
 [[Go-&gt;start of the true story]]</tw-passagedata><tw-passagedata pid="6" name="The motherland is angry" tags="" position="1100,400" size="100,100">You ask not to go, and so you get shunned out of the army and lose all priviliges of a civilian. You become a outcast and rot away i nyour small cottage within the jellyfish plains.
 
-[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="7" name="death" tags="" position="200,500" size="100,100">&lt;img src=&quot;photos/6.jpg&quot;&gt;
+[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="7" name="death" tags="nobackbutton" position="200,500" size="100,100">&lt;img src=&quot;photos/6.jpg&quot;&gt;
 and the motherland was killed off.
 
 
@@ -135,7 +129,7 @@ So you drive for miles, until you come across a desert, you also notice that you
 
 (after: 8s)[
 	Find some [[water before it becomes a problem.-&gt;wowow]] - 50% chance of succeeding
-	[[Keep on driving-&gt;nice]] - 50% chance of succeeding]</tw-passagedata><tw-passagedata pid="9" name="coming soon" tags="" position="475,500" size="100,100">The passage you just tried to enter isn&#39;t finished yet. Please be patient, it will more than likely come in another time.
+	[[Keep on driving-&gt;nice]] - 50% chance of succeeding]</tw-passagedata><tw-passagedata pid="9" name="coming soon" tags="nobackbutton" position="475,500" size="100,100">The passage you just tried to enter isn&#39;t finished yet. Please be patient, it will more than likely come in another time.
 
 [[back-&gt;start]]</tw-passagedata><tw-passagedata pid="10" name="wowow" tags="" position="800,600" size="100,100">{(set: _event to (random: 1, 2))
 (if: _event is 1)[
@@ -154,10 +148,10 @@ So you drive for miles, until you come across a desert, you also notice that you
 (if: $inv is &quot;Water&quot;)[
 	(goto: &quot;laterrrrrr&quot;)]
 (else:)[
-		You have kept on driving but you have completly ran out of water. This is the time to finally find some water. (if: _event is 1)[So you drived for hours, you become dehydrated and die. [[Next-&gt;death]]](else:)[So you drive for hours and you find a large amount of water within the harsh sand. [[Next-&gt;laterrrrrr]]]]}</tw-passagedata><tw-passagedata pid="12" name="laterrrrrr" tags="" position="896,796" size="100,100">You keep on driving forward, within the harsh desert. The sun keeps on getting hotter and hotter as you feel your sweat sticking to your cotton shirt making your shirt (text-style: &quot;fidget&quot;)[(opacity: 0.333333)[semi-translucent]] and sticking to your back on the chair of the Patty wagon. (after: 12s)[
+		You have kept on driving but you have completly ran out of water. This is the time to finally find some water. (if: _event is 1)[So you drived for hours, you become dehydrated and die. [[Next-&gt;death]]](else:)[So you drive for hours and you find a large amount of water within the harsh sand. [[Next-&gt;laterrrrrr]]]]}</tw-passagedata><tw-passagedata pid="12" name="laterrrrrr" tags="" position="896,796" size="100,100">(save-game: &quot;Slot 1&quot;)You keep on driving forward, within the harsh desert. The sun keeps on getting hotter and hotter as you feel your sweat sticking to your cotton shirt making your shirt (text-style: &quot;fidget&quot;)[(opacity: 0.333333)[semi-translucent]] and sticking to your back on the chair of the Patty wagon. (after: 12s)[
 	After some time you find a Moai (easter island statue) with small glass windows as eyes. With scarcity of water within the desert. You knock on the door, out comes a squid standing upright on the ground. The squid has a large nose as if it was the Moai. The squid has bright red eyes and he seems to be quite fidgety.]
 (after: 26s)[
-	&quot;What do you want.&quot; The squid asks with a high pitched American accent.
+	&quot;What do you want!&quot; The squid asks with a high pitched American accent.
 	Be [[Poliet-&gt;aaaaaaaahhhhhhhhh]]
 	Be [[Rude to the squid-&gt;the squid can die]]]
 
@@ -185,13 +179,68 @@ So you drive for miles, until you come across a desert, you also notice that you
 
 
 
-}</tw-passagedata><tw-passagedata pid="14" name="aaaaaaaahhhhhhhhh" tags="" position="821,946" size="100,100">&quot;Oh, I&#39;m sorry, I am just in some need for some water. You know, since its so hot.&quot; You ask nicely, the squid is looking weirdly at you. 
+}</tw-passagedata><tw-passagedata pid="14" name="aaaaaaaahhhhhhhhh" tags="" position="724.3333333333334,962.6666666666666" size="100,100">(save-game: &quot;Slot 1&quot;)&quot;Oh, I&#39;m sorry, I am just in some need for some water. You know, since its so hot.&quot; You ask nicely, the squid is looking weirdly at you. 
 &quot;HAHA, who do you think I am a, supermarket, go find some yourself, your kilometers away from everywhere, waht did you not pack enough water or something.&quot;
 
 (after: 11s)[
 	You walk away with slight amount of anger building up within you, but you keep on driving.
 	
-	[[Next-&gt;coming soon]]]</tw-passagedata><tw-passagedata pid="15" name="the squid can die" tags="" position="971,946" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata></tw-storydata>
+	[[Next-&gt;after squids place reeeeeeeeeeeeee]]]</tw-passagedata><tw-passagedata pid="15" name="the squid can die" tags="" position="971,946" size="100,100">(save-game: &quot;Slot 1&quot;)&quot;Thats no way to speak to a random citizen,&quot; you reply rudely. The squid begins to laugh. 
+&quot;Haha I like you, please come in and have a coffee.&quot; The squid said happily as though he met a new friend. He opens the door behind him and begins to sway his hands over towards the door. 
+
+[[Hide you gun and enter-&gt;nunu gun]]
+[[Enter the house]] &quot;What is he going to do to me?&quot;</tw-passagedata><tw-passagedata pid="16" name="nunu gun" tags="" position="896,1096" size="100,100">(save-game: &quot;Slot 1&quot;)You enter his house. The countertop in the kitchen has some kind of white powder. He must have been baking. The squid seems irritated.
+
+|lights&gt;[The lights are off]
+
+|lightslink&gt;[{
+	(link: &quot;Turn on the lights&quot;)[
+		(replace: ?lights)[(set: _lights to true)
+			You turned on the lights. You can now see the whole room. The flour in the kitchen appears to be too (text-style: &quot;condense&quot;)[c lumpy] to be flour. (after: time + 5s)[&quot;Hey! Turn those damn lights off.&quot; The squid said loudly as it scratches his neck. (link: &quot;Turn the lights back off&quot;)[(set: _lights to false)(replace: ?lights)[The lights are off]]]]]}]
+			
+(link: &quot;Ask for some tea&quot;)[{
+	(if: _lights is false)
+		[&quot;Oh of course allow me to go boils some water.&quot; The squid said quickly. The squid then scurries off towards the kitchen while you move to the dining room. [[Next-&gt;tea]](replace: ?lightslink)[&lt;!--NIL--&gt;]]
+	(else:)[(replace: ?lightslink)[&lt;!--NIL--&gt;]
+		&quot;No, you turned those damn lights on, and i dont like the light. And because you turned those lights on, you know what you can have. These.&quot; The squid said while holding a knife. (link: &quot;Try to run&quot;)[
+			(set: _event to (random: 1, 2))
+			(if: _event is 1)[
+				You run away to your car and drive off as fast as you can. [[Next-&gt;Car chase]]]
+			(else:)[
+				You try to run but he is just too fast. He could be on performance drugs. He stabs you. [[Next-&gt;death]]]]]}]
+
+
+
+(set: _lights to false)
+(enchant: &quot;sway&quot;, (text-style: &quot;sway&quot;))
+(enchant: &quot;his&quot;, (text-style: &quot;fidget&quot;))
+(enchant: &quot;He&quot;, (text-style: &quot;fidget&quot;))
+</tw-passagedata><tw-passagedata pid="17" name="Enter the house" tags="" position="1046,1096" size="100,100">(save-game: &quot;Slot 1&quot;)You enter his house. The lights are off, the countertop in the kitchen has some kind of white powder. He must have been baking. The squid seems irritated.
+
+|lights&gt;[The lights are off]
+
+|lightslink&gt;[{
+	(link: &quot;Turn on the lights&quot;)[
+		(replace: ?lights)[(set: _lights to true)
+			You turned on the lights. You can now see the whole room. The flour in the kitchen appears to be too (text-style: &quot;condense&quot;)[c lumpy] to be flour. (after: time + 5s)[&quot;Hey! Turn those damn lights off.&quot; The squid said loudly as it scratches his neck. (link: &quot;Turn the lights back off&quot;)[(set: _lights to false)(replace: ?lights)[The lights are off]]]]]}]
+			
+(link: &quot;Ask for some tea&quot;)[{
+	(if: _lights is false)
+		[&quot;Oh of course allow me to go boils some water.&quot; The squid said quickly. The squid then scurries off towards the kitchen while you move to the dining room. [[Next-&gt;tea]](replace: ?lightslink)[&lt;!--NIL--&gt;]]
+	(else:)[(replace: ?lightslink)[&lt;!--NIL--&gt;]
+		&quot;No, you turned those damn lights on, and i dont like the light. And because you turned those lights on, you know what you can have. These.&quot; The squid said while holding your AK48. What did you honestly not think to hide your gun? he shoots you. [[Next-&gt;death]]]}]
+
+
+
+(set: _lights to false)
+(enchant: &quot;sway&quot;, (text-style: &quot;sway&quot;))
+(enchant: &quot;his&quot;, (text-style: &quot;fidget&quot;))
+(enchant: &quot;He&quot;, (text-style: &quot;fidget&quot;))
+</tw-passagedata><tw-passagedata pid="18" name="Car chase" tags="" position="896,1246" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="19" name="tea" tags="" position="1046,1246" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="20" name="after squids place reeeeeeeeeeeeee" tags="" position="679.3333333333334,1471" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="21" name="description" tags="nobackbutton" position="591.6666666666666,5" size="100,100">This game is just a fun little game that i have created.
+
+The idea of said game was from, Kylan, Jake seeder, Brayden, And Aidan. 
+
+(after: 2s)[(goto: &quot;start&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
