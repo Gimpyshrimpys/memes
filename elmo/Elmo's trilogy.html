@@ -165,21 +165,10 @@ So you drive for miles, until you come across a desert, you also notice that you
 (enchant: &quot;patty Wagon&quot;, (text-style: &quot;expand&quot;))
 (enchant: &quot;patty wagon&quot;, (text-style: &quot;expand&quot;))
 (enchant: &quot;Patty wagon&quot;, (text-style: &quot;expand&quot;))
-(enchant: &quot;red&quot;, (text-colour: red))
-(enchant: &quot;Red&quot;, (text-colour: red))
-(enchant: &quot;blue&quot;, (text-colour: blue))
-(enchant: &quot;Blue&quot;, (text-colour: blue))
-(enchant: &quot;green&quot;, (text-colour: green))
-(enchant: &quot;Green&quot;, (text-colour: green))
 (enchant: &quot;Patty Wagons&quot;, (text-style: &quot;expand&quot;))
 (enchant: &quot;patty Wagons&quot;, (text-style: &quot;expand&quot;))
 (enchant: &quot;patty wagons&quot;, (text-style: &quot;expand&quot;))
-(enchant: &quot;Patty wagons&quot;, (text-style: &quot;expand&quot;))
-
-
-
-
-}</tw-passagedata><tw-passagedata pid="14" name="aaaaaaaahhhhhhhhh" tags="" position="724,962" size="100,100">(save-game: &quot;Slot 1&quot;)&quot;Oh, I&#39;m sorry, I am just in some need for some water. You know, since its so hot.&quot; You ask nicely, the squid is looking weirdly at you. 
+(enchant: &quot;Patty wagons&quot;, (text-style: &quot;expand&quot;))}</tw-passagedata><tw-passagedata pid="14" name="aaaaaaaahhhhhhhhh" tags="" position="724,962" size="100,100">(save-game: &quot;Slot 1&quot;)&quot;Oh, I&#39;m sorry, I am just in some need for some water. You know, since its so hot.&quot; You ask nicely, the squid is looking weirdly at you. 
 &quot;HAHA, who do you think I am a, supermarket, go find some yourself, your kilometers away from everywhere, waht did you not pack enough water or something.&quot;
 
 (after: 5s)[
@@ -195,11 +184,12 @@ So you drive for miles, until you come across a desert, you also notice that you
 
 |lightslink&gt;[{
 	(link: &quot;Turn on the lights&quot;)[
-		(replace: ?lights)[(set: _lights to true)
-			You turned on the lights. You can now see the whole room. The flour in the kitchen appears to be too (text-style: &quot;condense&quot;)[c lumpy] to be flour. (after: time + 2.5s)[&quot;Hey! Turn those damn lights off.&quot; The squid said loudly as it scratches his neck. (link: &quot;Turn the lights back off&quot;)[(set: _lights to false)(replace: ?lights)[The lights are off]]]]]}]
+		(replace: ?lights)[(set: $lights to true)
+			You turned on the lights. You can now see the whole room. The flour in the kitchen appears to be too (text-style: &quot;condense&quot;)[c lumpy] to be flour. (after: time + 2.5s)[&quot;Hey! Turn those damn lights off.&quot; The squid said loudly as it scratches his neck. (link: &quot;Turn the lights back off&quot;)	[
+				(replace: ?lights)[The lights are off](set: $lights to false)]]]]}]
 			
 (link: &quot;Ask for some tea&quot;)[{
-	(if: _lights is false)
+	(if: $lights is false)
 		[&quot;Oh of course allow me to go boils some water.&quot; The squid said quickly. The squid then scurries off towards the kitchen while you move to the dining room. [[Next-&gt;tea]](replace: ?lightslink)[&lt;!--NIL--&gt;]]
 	(else:)[(replace: ?lightslink)[&lt;!--NIL--&gt;]
 		&quot;No, you turned those damn lights on, and i dont like the light. And because you turned those lights on, you know what you can have. These.&quot; The squid said while holding a knife. (link: &quot;Try to run&quot;)[
@@ -211,7 +201,7 @@ So you drive for miles, until you come across a desert, you also notice that you
 
 
 
-(set: _lights to false)
+(set: $lights to false)
 (enchant: &quot;sway&quot;, (text-style: &quot;sway&quot;))
 (enchant: &quot;his&quot;, (text-style: &quot;fidget&quot;))
 (enchant: &quot;He&quot;, (text-style: &quot;fidget&quot;))
@@ -236,8 +226,11 @@ So you drive for miles, until you come across a desert, you also notice that you
 (enchant: &quot;sway&quot;, (text-style: &quot;sway&quot;))
 (enchant: &quot;his&quot;, (text-style: &quot;fidget&quot;))
 (enchant: &quot;He&quot;, (text-style: &quot;fidget&quot;))
-</tw-passagedata><tw-passagedata pid="18" name="Car chase" tags="" position="801,1394" size="100,100">(goto: &quot;coming soon&quot;)
-You start the engine of your car and start moving back onto the road you keep on driving for a few minutes but you start to hear a car starting from behind you. You look behind you and you see the squid in his car speeding towards you. </tw-passagedata><tw-passagedata pid="19" name="tea" tags="" position="1046,1246" size="100,100">{(set: _event to (random: 1, 2))(if: _event is 1)[
+</tw-passagedata><tw-passagedata pid="18" name="Car chase" tags="" position="801,1394" size="100,100">You start the engine of your car and start moving back onto the road you keep on driving for a few minutes but you start to hear a car starting from behind you. You look behind you and you see the squid in his car speeding towards you. Your instincts tell you to keep on driving.
+
+[[Keep on Driving]]
+[[Surrender]]
+[[Try to stop him]]</tw-passagedata><tw-passagedata pid="19" name="tea" tags="" position="1046,1246" size="100,100">{(set: _event to (random: 1, 2))(if: _event is 1)[
 	(replace: ?answer)[(text-style: &quot;expand&quot;)[YES,]]]
 (else:)[(text-style: &quot;expand&quot;)[NO,]]}The living room has syringes on the entertainment system. The more you sit in the dark the more you feel uneasy about this place.
 
@@ -280,7 +273,25 @@ The idea of said game was from, Kylan, Jake seeder, Brayden, And Aidan.
 			
 			
 			
-			q</tw-passagedata><tw-passagedata pid="23" name="Leave daniel behind" tags="" position="1121,1396" size="100,100">You leave Daniel behind and run towards your car. [[Next-&gt;Car chase]]</tw-passagedata><tw-passagedata pid="24" name="IDEK REEEE" tags="" position="971,1546" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata></tw-storydata>
+			q</tw-passagedata><tw-passagedata pid="23" name="Leave daniel behind" tags="" position="1121,1396" size="100,100">You leave Daniel behind and run towards your car. [[Next-&gt;Car chase]]</tw-passagedata><tw-passagedata pid="24" name="IDEK REEEE" tags="" position="1606,1691" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="25" name="Keep on Driving" tags="" position="857,2027" size="100,100">(set: $event to 1)You keep on driving like you had never seen him... You look into your rear mirrors and see him speeding, closer and closer, he comes towards you. &quot;Pull over old man.&quot; He shouted to you through your car, you grow (text-style: &quot;sway&quot;)[scared]. He smashes into your car, you skid and fall into the forest beside your car. 
+
+(after: 5s)[(text-style: &quot;blur&quot;)[You pass out in your car and see him] right next to you. He kneels down to see you,] &quot;(text-style: &quot;condense&quot;)[so, are you ok?]&quot; The squid asks. 
+
+[[Lie to him-&gt;sneaky liar]] saying that your fine.
+[[Speak honestly-&gt;death u go]] saying that you need a hostpital.
+
+
+(enchant: &quot;him&quot;, (text-style: &quot;fidget&quot;))</tw-passagedata><tw-passagedata pid="26" name="Surrender" tags="" position="1091,2037" size="100,100">You pull over onto the side of the road. The squid is still coming full speed towards you.
+
+&quot;You really think you can surrender after what you have done?&quot;
+
+[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="27" name="Try to stop him" tags="" position="1296,2037" size="100,100">(goto: &quot;coming soon&quot;)</tw-passagedata><tw-passagedata pid="28" name="sneaky liar" tags="" position="782,2177" size="100,100">The squid come towards you and gutterstomps your head.
+
+[[Next-&gt;death]]</tw-passagedata><tw-passagedata pid="29" name="death u go" tags="" position="932,2177" size="100,100">&quot;Nah your just lying. Arent you&quot;
+
+The squid come towards you and gutterstomps your head.
+
+[[Next-&gt;death]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
